@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // lendo dados
+        let numero1 = parseInt(prompt("Informe o primeiro numero: "))
+        let numero2 = parseInt(prompt("Informe o segundo numero:"))
+        // let numero3 = parseInt(prompt("Informe o terceiro numero: "))
+        // let numero4 = parseInt(prompt("Informe o quarto numero:"))
+
+
+        // // verificar se imput é valido
+        // if (isNaN(numero1) || isNaN(numero2)) {
+        //     console.error("Entre números válidos!");
+        //     console.warn("Entre números válidos!");
+        //     console.log("Entre números válidos!");
+        // }
+
+        // condições if - se
+            // if(numero1 > numero2) {
+            //     console.log("primeiro numero é maior que segundo numero")
+            // }else {console.log("segundo numero é maior que o primeiro numero")
+
+            // }
+
+            // // condições (if else)
+            // if(numero1 > numero2 && numero1 > numero3 && numero1 > numero4) {
+            //     console.log("numero " + " é o maior numero");
+            // } else {
+            //     console.log("numero " + numero1 + " não é maior é o maior numero");
+            // }
+
+
+            // ifs aninhados:
+            if (numero1 > numero2) {
+                console.log("numero " + numero1 + " é maior que " + numero2);
+
+                if (numero3 > numero4) {
+                    console.log("numero " + numero3 + " é maior que " + numero4);
+                } else {
+                    console.log("numero " + numero3 + " não é maior que " + numero4);
+
+                }
+            } else{
+                console.log("numero " + numero1 + " não é maior que " + numero2);
+
+            }
+
+    </script>
+</body>
+</html>
