@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //regras para declarar variaveis
+        //nomes devem ser intuitivos
+        //SEMPRE COMEÇAR COM LETRA MINUSCULA
+
+        //declaração e atribuição de variaveis usando let (block scope)
+        let inteiro = 10 //int
+        let Boolean = true //bool
+        let quebrado = 55.5 //float
+        let texto = "joão" //str
+
+        //declaração e atribuição de variaveis usando var (global scope)
+        var numero = 154
+        var string = "John" 
+        var boll = false 
+        var float = 180.47
+
+        //declaração de variavel constante usando const
+        const PI = 3.14
+        const CPF = "22230022501"
+
+        // tipagem
+        // console.log("\ntipos de dados: ")
+        // console.log(tipeof inteiro)
+        // console.log(tipeof texto)
+        // console.log(tipeof booleano)
+        // console.log(tipeof quebrado)
+        // console.log(tipeof PI)
+
+        //concatenação de strings
+        let saudacao = " olá, " + texto + "!" + " seja bem vindo(a) " + string + "!"
+        console.log("\nconcatenação: " + saudacao)
+
+        //operações com tipos numéricos
+        let resultado_1 = numero + 5
+        let resultado_2 = numero - 10
+        let resultado_3 = numero * 3
+        let resultado_4 = numero / 5
+        let resultado_5 = numero % 6
+
+        //operações
+        console.log("\noperações com tipos numericos: ")
+        console.log("resultado1: " + resultado_1)
+        console.log("resultado2: " + resultado_2)
+        console.log("resultado3: " + resultado_3)
+        console.log("resultado4: " + resultado_4)
+        console.log("resultado5: " + resultado_5)
+        
+        //porcentagem
+        let preco = 100
+        let desconto = preco * 0.05 // 5% desconto
+        let juros = preco * 0.01 // 10% de juros
+
+        //aplicando juros e desconto
+        let preco_com_desconto = preco - desconto
+        let valor_com_juros = preco + juros
+
+        console.log("\npreco = " + preco)
+        console.log("preco com desconto = " + preco_com_desconto)
+        console.log("preco com juros = " + valor_com_juros)
+
+
+        //módulo %
+        let num_1 = 1
+        let num_2 = 2
+
+        console.log(num_1 + " é impar " + ((num_1 % 2) !== 0))
+        console.log(num_1 + " é par " + ((num_1 % 2) === 0))
+        console.log(num_2 + " é impar " + (num_2 % 2) !== 0)
+        console.log(num_2 + " é par " + ((num_2 % 2) === 0))
+
+
+        //reduzindo casas com .tofixed()
+        let valor_longo = 10.24565425545
+
+        console.log("valor longo " + valor_longo)
+        console.log("valor longo = tofixed: " + valor_longo.toFixed(2))
+
+
+        //calcular méida com duas notas
+        let nota_1 = 7
+        let nota_2 = 9
+        let media_1 = (nota_1 + nota_2) / 2
+
+        console.log("média de "+ nota_1 + " e " + nota_2 + " é: " + media_1.toFixed(2))
+        
+
+        //calcular média com três notas
+        let nota_3 = 6
+        let nota_4 = 7
+        let nota_5 = 9
+
+    </script>
+</body>
+</html>
