@@ -14,7 +14,21 @@
         //Tipo Especificação:
         //Isósceles Dois lados iguais e um diferente
         //Escaleno Três lados diferentes
-        //Equilátero Três lados iguai
+        //Equilátero Três lados iguais
+
+        //Largura do triangulo3
+        let lado_a = parseFloat(prompt ('Digite o tamanho do lado A: '))
+        let lado_b = parseFloat(prompt ('Digite o tamanho do lado B: '))
+        let lado_c = parseFloat(prompt ('Digite o tamanho do lado C: '))
+
+        //Qual tipo de triangulo
+        if (lado_a && lado_b == lado_c) {
+            console.log ('O triangulo é do tipo Equilátero!')
+        } else if (lado_a != lado_b && lado_a != lado_c && lado_b != lado_c){
+            console.log ('O triangulo é do tipo Escaleno!')
+        } else {
+            console.log (' O triangulo é do tipo Isósceles!')
+        }
 
 
     </script>

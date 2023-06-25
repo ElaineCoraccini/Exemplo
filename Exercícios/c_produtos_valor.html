@@ -19,6 +19,38 @@
         //3 Macarrão R$ 16,00
 
 
+
+        //Informar código do produto ao usuário e valor pago
+        alert ('Cardápio: \n1) Pizza R$ 12,00 \n2) Pão de Queijo R$ 4,00 \n3) Macarrão R$ 16,00 ')
+
+        let pedido = parseInt(prompt ('Digite o código do produto escolhido: '))
+
+        //Valor do pedido e o troco
+        let valor_pedido = 0  //Inteiro
+        let troco = 0  //Inteiro
+
+
+        //Código pedido valor
+        if (pedido === 1 ) {
+                valor_pedido = 12
+            } else if (pedido === 2) {
+                valor_pedido = 4
+            } else if (pedido === 3) {
+                valor_pedido = 16
+            } else (alert ('Código digitado é inválido!'))
+        
+
+
+        // solicitando o valor pago:
+        let valor_pago = parseFloat(prompt ('Digite o valor pago: '))
+
+        //Validar se pagamento é inferior ao valor do pedido
+        if (valor_pago < valor_pedido) {
+            (alert ('valor pago é menor que o valor do pedido!'))
+        } else troco = valor_pago - valor_pedido
+            console.log('Troco a ser dado: R$ ' + troco.toFixed(2))
+
+
     </script>
 </body>
 </html>

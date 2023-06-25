@@ -8,7 +8,20 @@
 <body>
     <script>  
     
+    //d - Peça para o usuário informar três números, em seguida exiba o menor deles.
+    let primeiro_num = parseInt(prompt('Digite o primeiro número: '))
+    let segundo_num = parseInt(prompt('Digite o segundo número: '))
+    let terceiro_num = parseInt(prompt('Digite o terceiro número: '))
     
+
+    //Exibir menor dos 3
+    if (primeiro_num < segundo_num && primeiro_num < terceiro_num) {
+        console.log (' O menor número é o primeiro digitado: ' + primeiro_num)
+    } else if (segundo_num < primeiro_num && primeiro_num < terceiro_num) {
+        console.log (' O menor número é o segundo digitado: ' + segundo_num)
+    } else if (terceiro_num < primeiro_num && primeiro_num < segundo_num) {
+        console.log (' O menor número é o terceiro digitado: ' + terceiro_num)
+    } else console.log ('Os números digitados são iguais!')
     
     
     </script>
