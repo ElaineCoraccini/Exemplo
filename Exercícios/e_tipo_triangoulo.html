@@ -22,12 +22,15 @@
         let lado_c = parseFloat(prompt ('Digite o tamanho do lado C: '))
 
         //Qual tipo de triangulo
-        if (lado_a && lado_b == lado_c) {
-            console.log ('O triangulo é do tipo Equilátero!')
-        } else if (lado_a != lado_b && lado_a != lado_c && lado_b != lado_c){
-            console.log ('O triangulo é do tipo Escaleno!')
+
+
+
+        if (lado_a == lado_b && lado_b == lado_c) {
+            console.log ('O triangulo é do tipo Equilátero!') //Equilatero
+        } else if (lado_a != lado_b && lado_b != lado_c && lado_a != lado_c){
+            console.log ('O triangulo é do tipo Escaleno!') //Escaleno
         } else {
-            console.log (' O triangulo é do tipo Isósceles!')
+            console.log ('O triangulo é do tipo Isósceles!') //Isóceles
         }
 
 
