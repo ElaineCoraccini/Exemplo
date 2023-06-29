@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // b - Implemente uma matriz 3x2, na primeira coluna serão armazenados nomes de
+    // cursos, já na segunda coluna os valores. O cliente irá informar três cursos e três
+    // valores, em seguida exiba todos os cursos e valores.
+
+        //lista para armazenar dados
+        let matriz = []
+
+
+
+        //for loop para armazenar os valores dentro da matriz
+        for (let i = 0; i < 3; i++) {
+
+            //pedir dados ao usuario
+            let curso = prompt( ' Informe o curso ')
+            let valor = prompt(' Informe o valor para o curso ')
+
+            //criar sublista
+            let sublista = [curso, valor]
+
+            //adicionar siblista dentro da lista
+            matriz.push(sublista)
+
+        }
+
+        //mostrar todos os itens
+        for (let i = 0; i < matriz.length; i++)
+        alert(' Curso ' + matriz[i][0] + ' - Valor ' + matriz[i][1])
+
+
+    </script>
+</body>
+</html>

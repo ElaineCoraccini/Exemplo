@@ -13,6 +13,39 @@
     // Real para Euro: real / 6.13
     // Euro para Real: euro * 6.13
     //usar switch
+
+    let resultado
+    let valor_informado = prompt(' Informe o valor: ')
+    let tipo_de_conversao = prompt(' Informe o tipo da conversao: ')
+
+    switch (tipo_de_conversao) {
+        case 1:
+            resultado = valor_informado / 5.25
+            break
+        case 2:
+            resultado = valor_informado * 5.25
+            break
+        case 3:
+            resultado = valor_informado / 6.13
+            break
+        case 4:
+            resultado = valor_informado * 6.13 
+            break
+
+        default:
+            resultado = 'Imput inválido' 
+            break
+
+    }   
+    
+    if (typeof resultado === 'string') {
+        alert('informe o valor de 1 ao 4')
+    }   else {
+        alert(' O valor ' + tipo_de_conversao.toFixed(2))
+    }
+    
+
+
     
         //ler informações
         //1 = tipo de conversão (nós temos que mostrar os tipos)
