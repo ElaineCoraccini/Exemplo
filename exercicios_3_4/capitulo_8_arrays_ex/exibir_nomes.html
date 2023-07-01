@@ -19,24 +19,30 @@
     let lista_nomes = []
 
 
-    while (nome != ' sair ') {
-
-
+    while (nome != 'sair') {
+        
             //usar prompt para pedir nome
+           nome = prompt(' Informe um nome ou "sair" se deseja finalizar: ')
 
             //verificar se o usuario informou sair
-            // se informou sair;
-            // parar programa
+            if (nome != 'sair') { // se informou sair;
+                //nomes.push(nome) //usar o push para colocar o nome na lista
+                lista_nomes.push(nome)
 
+            } else 
+                break                     
 
-            //senão
-            //usar o push para colocar o nomena lista
+        }
 
-    }
+        alert(' Nome: ')
+    for (let i = 0; i < lista_nomes.length; i++) {
+        console.log(lista_nomes[i])  
 
-    //apos o loop parar, informa a quantidade de nomes que foram informados
+    }   
 
+    console.log(' Quantidade de nomes cadastrados: ' + lista_nomes.length)
 
+                //exercicio deu certo
 
     </script>
 </body>
