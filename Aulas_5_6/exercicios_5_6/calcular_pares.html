@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //calcular a soma dos numeros pares
+        //em uma intervalo (usar if, while e funcion)
+        function soma_dos_pares_em_intervalo(numero_inicio, numero_final) {
+            let soma_dos_pares = 0
+            let contador = numero_inicio
+
+            while (contador <= numero_final) {
+                if (contador % 2 === 0) {
+                    soma_dos_pares += contador
+                }
+                 contador++
+
+                //(if) se o contador eh igual par
+                //soma dos pares += contador
+                
+
+
+            }
+
+            return soma_dos_pares
+
+
+        }
+
+        let numero_inicio = parseInt(prompt(' Informe o numero inicial: '))
+        let numero_final = parseInt(prompt(' Informe o numero final: '))
+        let resultado = soma_dos_pares_em_intervalo(numero_inicio, numero_final)
+        alert('A soma dos pares é: ' + resultado)
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Contar quantas vezes uma letra aparece em uma string (Usar IF, FOR e FUNCTION)
+
+        //criar nossa função que conta quantas vezes
+        //uma letra especifica aparece em um texto
+    function contador_chars(letra_referencia, texto) {
+        let quantidade = 0
+
+        texto = texto.toLowerCase()
+        letra_referencia = letra_referencia.toLowerCase()
+
+        for (let i = 0; i < texto.length; i++) {
+            if (letra_referencia === texto[i].toLowerCase())
+                quantidade++
+        }
+
+        return quantidade
+
+    }
+    let texto = prompt('Digite um texto: ')
+
+    let letra_referencia = prompt('Digite uma letra: ')
+
+    let resultado = contador_chars(letra_referencia, texto)
+
+    console.log('A letra ' + letra_referencia + ' aparece ' + resultado + ' vezes no texto.') 
+    
+
+    //ler o texto informado pelo usuário, chamar a função para contar os caracteres
+    
+
+    //mostrar a quantidade de caracteres para o usuário
+    </script>
+</body>
+</html>

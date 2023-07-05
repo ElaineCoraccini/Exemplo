@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Declarando uma função
+        // //Function + nome da função + parametros
+        function somar_dois_numeros(numero_1, numero_2) {
+            return numero_1 + numero_2
+        }
+        // //Chamando a função
+        // console.log(somar_dois_numeros(5, 10))
+
+
+
+
+        function contar_ate_dez() {
+            let contador = 1
+
+            while(contador <= 10) {
+                console.log(contador)
+                contador++
+            }
+        }
+
+        //Chamar função para contar até 10 - semprefora da função
+        contar_ate_dez()
+
+
+            function verificar_dia_semana(numero_dia) {
+                //verifica qual o dia da semana baseado no numero informado
+                if (numero_dia == 1) {
+                    return 'Domingo'
+                } else if (numero_dia == 2) {
+                    return 'Segunda'
+                } else if (numero_dia == 3) {
+                    return 'terça'
+                } else if (numero_dia == 4) {
+                    return 'quarta'
+                } else if (numero_dia == 5) {
+                    return 'quinta'
+                } else if (numero_dia == 6) {
+                    return 'sexta'
+                } else if (numero_dia == 7) {
+                    return  'sabado'
+                } else {
+                    return 'Número inválido'
+                }
+                
+
+            }
+        while (true) {
+            let numero_dia = parseInt(prompt('Informe o numero ( 1 - 7) ou informe 8 para parar: '))
+
+            if (numero_dia >= 1 && numero_dia <= 7) {
+                console.log('O numero informado, retornou: ' + verificar_dia_semana(numero_dia))
+            } else if (numero_dia == 8) {
+                console.log('Programa parou!')
+                break
+            } else {
+                alert('Informe um dado válido! (1 - 8)!')
+            }
+
+        }  // for (let i = 1; i <= 7; i++) {
+            //     console.log(verificar_dia_semana(i)
+            // }
+
+        function calcular_media_aluno(lista_notas) {
+            //Percorrer todas as notas da lista
+            //percorrer a média das notas
+
+            let soma_dos_itens = 0.0
+            // somar todosos itens
+            for ( let i = 0; i < lista_notas.length; i++) {
+
+                soma_dos_itens += lista_notas[i]
+            }
+             // calcular média
+             let media = (soma_dos_itens / lista_notas.length)
+
+             //retornar média
+             return media
+
+        }
+
+        let lista_notas = [7.5, 8.2, 6.8, 9.0, 7.3]
+        let media_calculada = calcular_media_aluno(lista_notas)
+        console.log('A média das notas é: ' + media_calculada)
+
+           
+
+    </script>
+</body>
+</html>

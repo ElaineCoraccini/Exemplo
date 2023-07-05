@@ -1,0 +1,5 @@
+exercicio 1 - verificar se um numero é primo (usar if, for e function)
+
+exercicio 2 - contar quantas vezes uma letra aparece em uma string (usar if, for)
+
+exercicio 3 - 
