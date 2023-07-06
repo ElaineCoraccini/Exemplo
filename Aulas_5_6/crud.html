@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>administrador de tarefas</title>
+</head>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>administrador de tarefas</title>
+
+        <style>
+        body {
+            background-color: rgb(172, 134, 147);
+            color: rgb(23, 145, 145);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            background-color: bisque;
+            color: black;
+            padding: 5rem 2rem;
+            border: none;
+            margin: 5px;
+            font-size: large;
+            border-radius: 3px;
+
+        }
+
+        button:hover {
+            background-color: rgb(131, 86, 30);
+            color: rgb(97, 52, 52);
+            padding: 5rem 2rem;
+            border: none;
+            margin: 5px;
+            font-size: large;
+            scale: 1.1;
+            border-radius: 3px;
+
+        }
+            
+
+        h1 {
+            border: 1px solid white;
+            font-size: 200%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }    
+
+        
+
+
+
+        </style>
+        <!-- Usar font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Link para buscar icones: https://fontawesome.com/v4/icons/#web-application -->
+
+
+<body>
+
+    <div> 
+        <h1><i class="fa fa-server" aria-hidden="true"></i> Administrador de tarefas</h1>
+        <input type="text" id="input_tarefa">
+        <button id="botao_criar">CREATE</button>
+        <button id="botao_mostrar">DISPLAY</button>
+        <button id="botao_atualizar">UPDATE</button>
+        <button id="botao_delete">DELETE</button>
+        <button onclick="location.reload()">REFRESH</button>
+
+    </div>
+
+
+    <script>
+        //utilizado mais para teste
+        //conectar botoes html as funçoes js
+        document.getElementById('botao_criar').addEventListener('click', criar_tarefa)
+        document.getElementById('botao_mostrar').addEventListener('click', mostrar_tarefas)
+        document.getElementById('botao_atualizar').addEventListener('click', atualizar_dados)
+        document.getElementById('botao_delete').addEventListener('click', deletar_tarefa)
+
+        //CRUD:
+        // - cread = criar/inserir dados
+        // - read = ler
+        // - update = atualizar
+        // - delete = deletar/excluir
+
+        let lista_tarefas = []
+
+        function criar_tarefa() {
+            let tarefa_nova = document.getElementById('input_tarefa').value
+
+            //verificar se foi informado os dados
+
+            if (tarefa_nova.length > 0) {
+                //adicionar a tarefa na lista principal de tarefas
+
+                lista_tarefas.push(tarefa_nova)
+                alert(' Tarefa ' + tarefa_nova + ' foi inserida. ')
+                document.getElementById('input_tarefa').value = ''
+            } else {
+                alert(' Informe uma tarefa válida! ')
+            }
+        }
+        
+        // criar_tarefa()
+        // funçao para mostrar os dados ao usuário
+        function mostrar_tarefas () {
+            //verificar se tem itens na lista
+            if (lista_tarefas.length > 0) {
+                //guardara a mensagem que vai aparecer ao usuário
+                let tarefas_armazenadas = 'Lista de tarefas armazenadas: \n'
+
+
+                for (let i = 0; i < lista_tarefas.length; i++) {
+                    tarefas_armazenadas += 'Tarefas ' + i + ': ' + lista_tarefas[i] + '\n'
+                } 
+                alert(tarefas_armazenadas)
+            } else 
+                alert('Não existem itens na lista ainda!') 
+            
+        }
+        // criar_tarefa()
+        // criar_tarefa()
+        // criar_tarefa()
+        // mostrar_tarefas()
+        // atualizar_dados()
+        // mostrar_tarefas()
+
+
+        //funçao para atualizar os dados
+        function atualizar_dados() {
+            //posiçaõ do item na lista
+            let posicao = parseInt(prompt('Informe a posição da tarefa: '))
+            //subtrair na variavel
+            
+            //validar a posição 
+            if (posicao >= 0 && posicao < lista_tarefas.length) {
+                //ler a tarefa nova
+                let tarefa_atualizada = prompt('Informe a tarefa nova: ')
+
+                if (tarefa_atualizada.length > 0) {
+
+                    //sobrescrever a informação n aposição informada na lista
+                    lista_tarefas[posicao] = tarefa_atualizada
+
+                } else {
+                    alert('Informe uma tarefa válida!')
+                }
+            } else {
+
+                alert('Informae uma posição válida!')
+            }
+                    
+
+        }
+        
+
+        //funçao para deletar a tarefa
+        function deletar_tarefa() {
+            //ler posição da tarefa
+            let posicao = parseInt(prompt('Informe a posição da tarefa: '))
+
+            //validar posição
+            if (posicao >= 0 && posicao < lista_tarefas.length) {
+
+                let tarefa_deletada = lista_tarefas[posicao]
+                lista_tarefas.splice(posicao, 1)
+                alert('A tarefa ' + tarefa_deletada + ' foi deletada com sucesso!') 
+
+            } else {
+                alert ('Informe uma posição válida.')
+            }
+        }
+    </script>
+</body>
+</html>
