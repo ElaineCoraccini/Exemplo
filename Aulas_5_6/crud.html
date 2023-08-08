@@ -10,69 +10,99 @@
         <title>administrador de tarefas</title>
 
         <style>
-        body {
-            background-color: rgb(172, 134, 147);
-            color: rgb(23, 145, 145);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
+            body {
+                background-color:lightgoldenrodyellow;
+                color:rgb(112, 34, 185);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+                
+            }
 
-        button {
-            background-color: bisque;
-            color: black;
-            padding: 5rem 2rem;
-            border: none;
-            margin: 5px;
-            font-size: large;
-            border-radius: 3px;
-
-        }
-
-        button:hover {
-            background-color: rgb(131, 86, 30);
-            color: rgb(97, 52, 52);
-            padding: 5rem 2rem;
-            border: none;
-            margin: 5px;
-            font-size: large;
-            scale: 1.1;
-            border-radius: 3px;
-
-        }
-            
-
-        h1 {
-            border: 1px solid white;
-            font-size: 200%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }    
-
+        /* Editar botões do site  */
+            button {
+                background-color:beige;
+                color:rgb(98, 28, 164);
+                padding:.5rem 2rem;
+                border: none;
+                margin: 8px;
+                font-size: large;
+                border-radius: 4px;
+            }
         
+            button:hover {
+                background-color:coral;
+                color:lavender;
+                padding:.5rem 2rem;
+                border: none;
+                margin: 5px;
+                font-size: large;
+                scale: 1.1; 
+                border-radius: 3px;
+            }
+        
+        /* Editar input do site  */
+            input {
+                background-color:white;
+                color:black;
+                padding:.5rem 2rem;
+                border: none;
+                font-size: large;
+                border-radius: 3px;
+             }
+        
+            h1 {
+                border: 1px solid skyblue;
+                font-size: 200%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 3px;
+            }
 
+            h1:hover {
+                background-color:floralwhite;
+                color: black;
+                border: 1px solid skyblue;
+                font-size: 200%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 3px;
+            }
 
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animated-element-left {
+            animation: slideInFromLeft 1s ease-in;
+        }
+        
 
         </style>
         <!-- Usar font awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Link para buscar icones: https://fontawesome.com/v4/icons/#web-application -->
-
+</head>
 
 <body>
-
-    <div> 
-        <h1><i class="fa fa-server" aria-hidden="true"></i> Administrador de tarefas</h1>
-        <input type="text" id="input_tarefa">
-        <button id="botao_criar">CREATE</button>
-        <button id="botao_mostrar">DISPLAY</button>
-        <button id="botao_atualizar">UPDATE</button>
-        <button id="botao_delete">DELETE</button>
-        <button onclick="location.reload()">REFRESH</button>
+            <!-- Botões para o CRUD -->
+        <div class="animated-element-left">
+            <h1><i class="fa fa-folder" aria-hidden="true"></i> Administrador de tarefas</h1>
+            <input type="text" id="input_tarefa">
+            <button id="botao_criar"><i class="fa fa-pencil" aria-hidden="true"></i> CREATE</button>
+            <button id="botao_mostrar"><i class="fa fa-television" aria-hidden="true"></i> DISPLAY</button>
+            <button id="botao_atualizar"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> UPDATE</button>
+            <button id="botao_deletar"><i class="fa fa-trash" aria-hidden="true"></i> DELETE</button>
+            <button onclick="location.reload()"><i class="fa fa-refresh" aria-hidden="true"></i> REFRESH</button>
 
     </div>
 
@@ -126,7 +156,7 @@
                 alert('Não existem itens na lista ainda!') 
             
         }
-        // criar_tarefa()
+        // criar_tarefa() usado para testar
         // criar_tarefa()
         // criar_tarefa()
         // mostrar_tarefas()

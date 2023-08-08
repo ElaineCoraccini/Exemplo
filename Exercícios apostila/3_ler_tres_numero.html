@@ -7,7 +7,26 @@
 </head>
 <body>
     <script>
-        //3: Crei um programa que leia 3 números e identifique qual é o maior número.
+        //3: Crie um programa que leia 3 números e identifique qual é o maior número.
+
+        let numero_1 = parseInt(prompt('Informe o primeiro nº: '))
+        let numero_2 = parseInt(prompt('Informe o segundo nº: '))
+        let numero_3 = parseInt(prompt('Informe o terceiro nº: '))
+
+        if (isNaN(numero_1) || isNaN(numero_2) || isNaN(numero_3)) {
+            alert('Os valores informados precisam ser numeros inteiros!')
+        } else {
+            if (numero_1 > numero_2 && numero_1 > numero_3) {
+                alert('Primeiro número é maior!')
+            } else if (numero_2 > numero_1 && numero_2 > numero_3) {
+                alert('Segundo número é maior!')                 
+            } else if (numero_3 > numero_1 && numero_3 > numero_2) {
+                alert('Terceiro número é maior!')
+            }
+
+
+        }
+    
 
 
 

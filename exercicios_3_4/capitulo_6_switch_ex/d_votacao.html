@@ -14,12 +14,36 @@
         let candidato1 = 0
         let candidato2 = 0
         let candidato3 = 0
-        let candidato = 0
+        let voto = 0
 
-        
+        let menu = alert('Veja a tabela de candidatos:\n 1- candidato Ligeirinho  \n 2- candidato NãofoiEU \n 3- candidato Ladino ')
 
+        while (voto != 4) {
+            voto = prompt(' Vote em um candidato ou digite 4 para sair: ')
+
+            if (voto === '1'){
+                candidato1++
+            } else if (voto === '2') {
+                candidato2++
+            } else if (voto === '3') {
+                candidato3++
+            } else if (voto != '4') {
+                alert('Candidato inválido!')
+
+            }
     
-    
+
+        }
+
+        let mensagem = 'Candidato Ligeirinho recebeu ' + candidato1 + ' votos'
+        mensagem += '\nCandidato NãofoiEU recebeu ' + candidato2 + ' votos'
+        mensagem += '\nCandidato Ladino recebeu ' + candidato3 + ' votos'
+
+        alert(mensagem)
+
+        // alert(' Candidato Ligeirinho: ' + candidato1 + ' votos\n')
+        // alert(' Candidato Nãofoieu: ' + candidato2 + ' votos\n')
+        // alert(' candidato Ladino: ' + candidato3 + ' votos\n')       
     
     </script>
 </body>

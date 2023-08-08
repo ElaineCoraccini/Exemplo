@@ -8,6 +8,28 @@
 <body>
     <script> 
     
+    // O usuário informa um número inicial e um número final, em seguida retorne a
+    // quantidade de pares e ímpares daquela cadeia de valores.
+    // Vamos supor que os números informados foram: 6 e 12, sendo assim serão 4
+    // pares (6, 8, 10 e 12) e 3 ímpares (7, 9 e 11).
+    let inicial = parseInt(prompt(' Digite um número para começar: ')) //solicitar numeros ao usuário para iniciar o calculo
+    let final = parseInt(prompt(' Digite um número para final: '))
+    let pares = 0
+    let impares = 0
+
+
+    while (inicial <= final) {
+            if (inicial % 2 === 0) { //numero é divisivel por 2?
+                pares++ //imcrementa par se não
+
+            } else {
+                impares++ //incrementa impar
+            }
+            inicial++ //no intervalo gerou x numero (par/impar)
+        }
+        //exibindo resultado
+        console.log(' Números pares: ' + pares)
+        console.log(' Número impares: ' + impares)
     
     
     

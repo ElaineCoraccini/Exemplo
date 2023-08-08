@@ -14,7 +14,43 @@
 	    //- Outono = Março, Abril, Maio
 	    //- Inverno = Junho, Julho, Agosto
 
+        function estacaodoAno(mes) {
+            switch (mes) {
+                case 9:
+                case 10:
+                case 11:
+                    return 'Primavera'
+                    //break
+                case 12:
+                case 1:
+                case 2:
+                    return 'Verão'
+                    //break
+                case 3:
+                case 4:
+                case 5:
+                    return 'Outono'
+                    //break
+                case 6:
+                case 7:
+                case 8:
+                    return 'Inverno'
+                    break
+                default:
+                    return 'Mês inválido, digite de 1 a 12.'
 
+            }
+        }
+
+const mes = parseInt(prompt(' Insira um mês de 1 a 12: '))
+const estacaodoano = estacaodoAno(mes)
+
+// if (mes >= 1 && mes <= 12) {
+    console.log('O mês ' + mes + ' está na estação ' + estacaodoAno)
+// } else {
+    // console.log('O mês ' + mes + 'não corresponde a nenhuma estação do ano.')
+
+ //COM ERRO SINTAXE
 
     
     </script>

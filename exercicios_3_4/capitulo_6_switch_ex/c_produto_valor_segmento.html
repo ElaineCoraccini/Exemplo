@@ -19,26 +19,52 @@
     //precisamos da variável segmento (vestuario, eletronico ou alimentação)
     //precisamos da variável desconto
 
+    let nome_do_produto = prompt(' Informa o produto: ')
+    let valor = prompt(' Informe o valor do produto: ')
+    let segmento = prompt(' Qual o segmento (Vestuário, Eletrônico ou Alimentício)? ')
+    let desconto = 0
 
-    //verificar com if qual desconto aplicar para qual produto/segmento
+    segmento = segmento.toLowerCase()
 
+    //removendo os acentos
+    if (segmento === 'Vestuário') {
+        segmento = 'vestuario'
+    } else if (segmento === 'Eletrônico') {
+        segmento = 'eletronico'
+    } else if (segmento === 'Alimentício') {
+        segmento = 'alimenticio'
+    }
 
-    //se o produto e vestuario - if
+       //switch permite realizar diferentes ações com base no valor de uma expressão
+       switch (segmento) {
+
+        //se o produto e vestuario - if - vestuário será dado 5%
         //block1
         //ajustar o desconto
+        case 'vestuario':
+            desconto = 0.05
+            break   
 
-
-    //caso seja eletronico - if
+    //caso seja eletronico - if - caso eletrônico 8%
         //block 2
         //ajustar o desconto
+        case 'eletronico':
+            desconto = 0.08
 
-
-    //caso seja alimenticio - fi
+    //caso seja alimenticio - if - alimentício 10%
         //block 3
         //ajustar o desconto
+        case 'alimenticio':
+            desconto = 0.1
+            break
 
+            default: //default é executado se nenhum dos valores dos "case" corresponder ao valor fornecido.
+                console.log(' Segmento inválido! ')
 
+       }
+        
         //realizar o calculo do desconto
+
 
         //mostrar o resultado final
     

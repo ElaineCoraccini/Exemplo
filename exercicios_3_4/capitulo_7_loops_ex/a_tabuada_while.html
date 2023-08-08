@@ -8,8 +8,26 @@
 <body>
     <script> 
     
+    // O usuário irá informar um número, em seguida realizar a tabuada daquele
+    // número.
     
-    
+    let numero = prompt(' Digite um número: ') //se numero digitado
+
+    if (isNaN(numero)) {
+        alert(' Digite um número válido! ') 
+
+    } else {
+        numero = parseInt(numero) //converter nº inteiro para iniciar loop
+
+        let i = 1 //iniciar contador
+        alert ('Tabuada do ' +  numero + ' : ')
+
+        while (i <= 10) { 
+            let resultado = numero * i //informa tipo de calculo (soma, multiplica, reduz, divide)
+            console.log(numero + ' x ' + i + ' = ' + resultado) 
+            i++
+        }
+    }
     
     </script>
 </body>

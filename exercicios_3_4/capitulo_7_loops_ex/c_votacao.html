@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Crie um pequeno sistema de votação, exiba em um prompt() as opções:
+    1 - Alessandra
+    2 - Caio
+    3 - Geraldo
+    4 - Talita
+    5 - Sair
+    
+    Enquanto não for digitado o número 5 o laço deverá realizar a ação de
+    prompt() para pedir o voto e contabilizar para o candidato. Quando
+    informado o número 5 retorne a quantidade de votos que cada candidato
+    obteve. -->
+
+        <script>
+
+        let candidato_1 = 0
+        let candidato_2 = 0
+        let candidato_3 = 0
+        let candidato_4 = 0
+       
+        while (true) {
+            let voto = prompt('Informe seu cadidato: \n 1 - Alessandra\n 2 - Caio\n 3 - Geraldo\n 4 - Talita\n 5 - Sair') 
+            if (voto == 5) {
+                break
+            } else if (voto == 4) {
+                candidato_4++
+            } else if (voto == 3) {
+                candidato_3++
+            } else if (voto == 2) {
+                candidato_2++
+            } else if (voto == 1) {
+                candidato_1++
+            } 
+        }
+
+        console.log('Cadidato 1 tem ' + candidato_1 + ' votos.')
+        console.log('Cadidato 2 tem ' + candidato_2 + ' votos.')
+        console.log('Cadidato 3 tem ' + candidato_3 + ' votos.')
+        console.log('Cadidato 4 tem ' + candidato_4 + ' votos.')
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+</body>
+</html>
