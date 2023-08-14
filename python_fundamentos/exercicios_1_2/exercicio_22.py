@@ -2,7 +2,9 @@
 # O programa deve permitir que o usuário adicione novos pedidos, 
 #remova pedidos prontos e exiba os pedidos pendentes.
 
-def gerencir_pedidos():
+import os
+
+def gerenciar_pedidos():
     pedidos = []
 
     while True:
@@ -36,3 +38,5 @@ def gerencir_pedidos():
             break
         else:
             print('Opção inválida.')
+
+gerenciar_pedidos()

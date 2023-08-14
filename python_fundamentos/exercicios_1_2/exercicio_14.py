@@ -3,3 +3,18 @@
 #o programa deve retornar a lista sem duplicatas: [1, 2, 3, 4, 5]. 
 #Utilize listas e um for loop para percorrer a lista 
 #original e uma nova lista para armazenar os elementos únicos.
+
+import os
+
+
+
+
+def main():
+  ...
+  
+
+
+if __name__ == '__main__':
+    os.system ('cls')
+    os.system ('python --version')
+    main()
